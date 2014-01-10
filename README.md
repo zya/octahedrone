@@ -1,7 +1,7 @@
-octahedrone
+OCTAHEDRONE
 ===========
 
-Generative Audio Visual Sketch
+Generative Audio Visual Sketch - Web Audio API + Three.js
 
 The sketch is an audio visual experiment that uses Web Audio API for sound sythesis/processing and THREE.JS for WebGL 3D rendering.
 
