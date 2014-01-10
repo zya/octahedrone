@@ -1,7 +1,8 @@
 OCTAHEDRONE
 ===========
 
-Generative Audio Visual Sketch - Web Audio API + Three.js
+Generative Audio Visual Sketch - Web Audio API + Three.js.
+
 http://www.zya.cc/oct
 
 ===========
