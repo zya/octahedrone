@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<title>OCTAHEDRONE</title>
+<meta property="og:title"
+content="OCTAHEDRONE - Interactive and Generative Music by ZYA" />
+<meta property="og:url"
+content="http://www.zya.cc/oct" />
+
+
+<meta property="og:description" content="The sketch is an audio visual experiment that uses Web Audio API for sound sythesis/processing and THREE.JS for WebGL 3D rendering.
+
+The background music is being generated in real-time using Web Audio API while each face of the floating octahedron has a certain sustaining note which allows you to create evolving arpeggios and textures by clicking different faces.
+
+Clicking anywhere else will change the color of the background objects which combined with mouse movment results in interesting textures in the background as well as subtle stereo panning on the background sounds.
+
+Runs best on Google Chrome." />
+
+<meta property="og:image"
+content="http://static.tumblr.com/oczhivm/c2Cmwq30l/oct1.jpg" />
+
+
+	<script src="libs/jquery-1.10.1.js"></script>
+	<script src="libs/three.min.js"></script>
+	<script src="libs/detector.js"></script>
+	
+	<script src="libs/shaders/copyshader.js"></script>
+	<script src="libs/shaders/dotscreenshader.js"></script>
+	<script src="libs/shaders/filmshader.js"></script>
+	<script src="libs/shaders/rgbshiftshader.js"></script>
+	<script src="libs/shaders/staticshader.js"></script>
+	<script src="libs/postprocessing/effectcomposer.js"></script>
+	<script src="libs/postprocessing/renderpass.js"></script>
+	<script src="libs/postprocessing/shaderpass.js"></script>
+	<script src="libs/postprocessing/bloompass.js"></script> 
+	<script src="libs/postprocessing//maskpass.js"></script> 
+	<script src="libs/postprocessing/filmpass.js"></script> 
+
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Arvo|Arimo|Belleza|Karla:400,700|Averia+Gruesa+Libre|Raleway+Dots|Julius+Sans+One' rel='stylesheet' type='text/css'>
+
+	<script src="main.js"></script>
+	<style type="text/css">
+		html{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			margin:0;
+			padding: 0;
+			overflow-y: hidden;	
+			text-align: center;
+
+		}
+		canvas{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			position: none;
+
+		}
+
+		a{
+			text-decoration: none;
+			color: #888888;
+		}
+
+		
+		#container{
+			padding-top: 20%;
+			padding-bottom: 10%;
+			width: 100%;
+			//height: 600px;
+			text-align: center;
+			position: absolute;
+			z-index: 2;
+		}
+
+		#title{
+			font-family: 'Julius Sans One', sans-serif;
+			font-size: 35px;
+		}
+
+		#description{
+			font-family: 'Julius Sans One', sans-serif;
+		}
+		#description2{
+			font-family: 'Karla', sans-serif;
+			font-size: 12px;
+			width: 50%;
+			padding-left: 25%;
+			text-align: justify;
+
+		}
+
+		#button{
+			background: black;
+			width: 120px;
+			height: 50px;
+			border: none;
+			color: white;
+			font-family: 'Julius Sans One', sans-serif;
+			font-size: 12px;
+		}
+
+		#button:hover{
+			background: #888888;
+			cursor: pointer;
+		}
+
+	</style>
+
+	<body>
+		<div id='container'>
+			<div id='title'>OCTAHEDRONE</div><br>
+			<div id='description'>Interactive and Generative Music by <a href='http://www.zya.cc/'>ZYA</a></div><br>
+			<button id='button'>Loading</button><br><br>
+			<div id='description2'>The sketch is an audio visual experiment that uses <a href=''>Web Audio API</a> for sound sythesis/processing and <a href='http://www.threejs.org'>THREE.JS</a> for WebGL 3D rendering.<br><br>
+			The background sounds are being generated in real-time using Web Audio API while each face of the floating octahedron has a certain sustaining note which allows you to create evolving arpeggios and textures by clicking on different faces.<br><br>
+			Clicking anywhere else will change the color of the background objects which combined with mouse movment results in interesting textures in the background as well as subtle stereo panning on the background sounds.<br><br>
+			Runs best on <a href='http://www.google.com/chrome'>Google Chrome</a>.
+			</div><br><br>
+			<a href="http://www.chromeexperiments.com/detail/octahedrone/"><img src="http://www.chromeexperiments.com/img/badge-black_black.png" alt="See my Experiment on ChromeExperiments.com" /></a>
+		</div>
+	 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45115441-1', 'zya.cc');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
