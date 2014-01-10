@@ -2,6 +2,9 @@ OCTAHEDRONE
 ===========
 
 Generative Audio Visual Sketch - Web Audio API + Three.js
+http://www.zya.cc/oct
+
+===========
 
 The sketch is an audio visual experiment that uses Web Audio API for sound sythesis/processing and THREE.JS for WebGL 3D rendering.
 
