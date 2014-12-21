@@ -52,12 +52,12 @@ masterGain.connect(context.destination);
 
 var request = new XMLHttpRequest();
 //loading the reverb
-request.open('GET', 'https://dl.dropboxusercontent.com/u/141488253/rev.wav' , true);
+request.open('GET', 'rev.mp3' , true);
 request.responseType = "arraybuffer";
 request.onload = function(){
-	context.decodeAudioData(request.response, function(buffer){
-    reverb.buffer = buffer; 
-    $('#button').html('Start');
+        context.decodeAudioData(request.response, function(buffer){
+        reverb.buffer = buffer;
+        $('#button').html('Start');
     });
 };
 request.send();
@@ -109,7 +109,7 @@ function Drone(){
 	for(var i=0;i < this.oscillators.length; i++){
 		this.oscillators[i].connect(this.env);
 		this.oscillators[i].type = 0;
-		this.oscillators[i].start(this.now);
+		this.oscillators[i].start(now);
 	}
 	this.env.gain.setValueAtTime(this.env.gain.value, now);
 	this.env.gain.linearRampToValueAtTime(1, now + 5);
@@ -384,7 +384,10 @@ function Pad2(){
 //Anim Setup
 function setup(){
 	//initials
-	renderer = new THREE.WebGLRenderer({ preserveDrawingBuffer: true });
+	renderer = new THREE.WebGLRenderer({
+        preserveDrawingBuffer: true,
+        antialias: true
+    });
 	renderer.setSize(window.innerWidth,window.innerHeight);
 	document.body.appendChild(renderer.domElement);
 	//set background color
