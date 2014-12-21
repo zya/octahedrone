@@ -1,5 +1,5 @@
 
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage(); //webGL support check
+if ( ! Detector.webgl ) alert("Your browser does not support WebGL. Please try Chrome or Firefox.") //webGL support check
 //Audio
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.oAudioContext;
 var context = new AudioContext();
